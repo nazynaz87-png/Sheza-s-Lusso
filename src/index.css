@@ -1,0 +1,266 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #08080b;
+    color: #f7f6f2;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, .font-serif-luxury {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+  
+  .font-brand {
+    font-family: 'Cinzel', Georgia, serif;
+    letter-spacing: 0.15em;
+  }
+}
+
+/* RTL Layout Configuration */
+body.rtl-layout {
+  direction: rtl;
+}
+
+body.rtl-layout .text-left {
+  text-align: right;
+}
+
+body.rtl-layout .text-right {
+  text-align: left;
+}
+
+/* 3D Perspective & Spatial Depth Engine */
+.perspective-800 {
+  perspective: 800px;
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.perspective-2000 {
+  perspective: 2000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+.translate-z-5 {
+  transform: translateZ(5px);
+}
+
+.translate-z-10 {
+  transform: translateZ(10px);
+}
+
+.translate-z-20 {
+  transform: translateZ(20px);
+}
+
+.translate-z-30 {
+  transform: translateZ(30px);
+}
+
+.translate-z-40 {
+  transform: translateZ(40px);
+}
+
+.translate-z-50 {
+  transform: translateZ(50px);
+}
+
+.translate-z-60 {
+  transform: translateZ(60px);
+}
+
+/* 3D Tactile Gold Button with Physical Bevel */
+.btn-3d-gold {
+  position: relative;
+  background: linear-gradient(135deg, #f3e0aa 0%, #d4af37 40%, #aa8420 100%);
+  color: #000000;
+  box-shadow: 
+    0 4px 0 #735914,
+    0 8px 20px -4px rgba(212, 175, 55, 0.45),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(0);
+}
+
+.btn-3d-gold:hover {
+  filter: brightness(1.08);
+  box-shadow: 
+    0 6px 0 #735914,
+    0 12px 28px -4px rgba(212, 175, 55, 0.6),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  transform: translateY(-2px);
+}
+
+.btn-3d-gold:active {
+  box-shadow: 
+    0 1px 0 #735914,
+    0 4px 10px -2px rgba(212, 175, 55, 0.3),
+    inset 0 2px 4px rgba(0, 0, 0, 0.3);
+  transform: translateY(3px);
+}
+
+/* 3D Dark Vault Plaque */
+.plaque-3d-dark {
+  background: linear-gradient(145deg, #161622 0%, #0d0d14 100%);
+  border: 1px solid #2e281d;
+  box-shadow: 
+    0 15px 35px -10px rgba(0, 0, 0, 0.9),
+    0 0 20px -5px rgba(212, 175, 55, 0.12),
+    inset 0 1px 1px rgba(255, 255, 255, 0.08),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.8);
+}
+
+/* 3D Floating Stage Ambient Pedestal */
+.pedestal-3d {
+  background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.25) 0%, rgba(20, 20, 28, 0.8) 55%, transparent 70%);
+  transform: rotateX(65deg);
+  transform-origin: center center;
+}
+
+/* 3D Hologram Grid Lines */
+.grid-3d-plane {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(212, 175, 55, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(212, 175, 55, 0.07) 1px, transparent 1px);
+  transform: rotateX(60deg);
+  transform-origin: center top;
+}
+
+/* 3D Orbit Keyframes */
+@keyframes float3d {
+  0%, 100% {
+    transform: translateY(0px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotateX(4deg) rotateY(-4deg);
+  }
+}
+
+@keyframes spin3dSlow {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes pulseRing3d {
+  0% {
+    transform: scale(0.9) rotateX(70deg);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.15) rotateX(70deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(0.9) rotateX(70deg);
+    opacity: 0.6;
+  }
+}
+
+.animate-float-3d {
+  animation: float3d 6s ease-in-out infinite;
+}
+
+.animate-spin-3d-slow {
+  animation: spin3dSlow 20s linear infinite;
+}
+
+.animate-pulse-ring-3d {
+  animation: pulseRing3d 4s ease-in-out infinite;
+}
+
+/* Custom royal gold scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #0d0d12;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a261f;
+  border-radius: 4px;
+  border: 1px solid #3d3527;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c5a059;
+}
+
+/* Royal luxury glow utilities */
+.royal-gold-glow {
+  box-shadow: 0 0 25px -5px rgba(212, 175, 55, 0.25);
+}
+
+.royal-gold-border {
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.royal-card-dark {
+  background: linear-gradient(180deg, #13131a 0%, #0d0d12 100%);
+  border: 1px solid #26221b;
+}
+
+@keyframes premium-shimmer {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  50% { transform: translateX(150%) skewX(-20deg); }
+  100% { transform: translateX(150%) skewX(-20deg); }
+}
+
+.animate-premium-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-premium-shimmer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  animation: premium-shimmer 4s infinite linear;
+}
+
+/* Specific Gold Shimmer for VIP Badge */
+.gold-shimmer-bg {
+  background: linear-gradient(135deg, 
+    #b8860b 0%, 
+    #ffd700 25%, 
+    #daa520 50%, 
+    #ffd700 75%, 
+    #b8860b 100%
+  );
+  background-size: 200% auto;
+  animation: shine-sweep 8s linear infinite;
+}
+
+@keyframes shine-sweep {
+  to { background-position: 200% center; }
+}

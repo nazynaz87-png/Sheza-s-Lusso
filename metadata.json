@@ -1,0 +1,6 @@
+{
+  "name": "Sheza's Lusso",
+  "description": "Global affordable luxury maison with an interactive 3D Royal Atelier, multi-language translation, and worldwide shipping. Shop fine jewelry, bespoke couture, romantic dates, palatial weddings, and travel.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
